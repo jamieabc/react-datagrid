@@ -7338,7 +7338,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			value: function handleWheel(event) {
 
 				var props = this.props;
-				var normalizedEvent = normalizeWheel(event);
+				// var normalizedEvent = normalizeWheel(event)
 
 				var virtual = props.virtualRendering;
 				debugger;
@@ -7353,13 +7353,8 @@ return /******/ (function(modules) { // webpackBootstrap
 				var scrollTop = props.scrollTop;
 				var scrollLeft = props.scrollLeft;
 
-				var delta;
-
-				if (IS_MAC) {
-					delta = event.deltaY;
-				} else {
-					delta = normalizedEvent.pixelY;
-				}
+				// var delta = normalizedEvent.pixelY
+				var delta = event.deltaY;
 
 				if (horizontal) {
 					if (IS_MAC) {
